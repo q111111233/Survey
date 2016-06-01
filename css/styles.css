@@ -3,3 +3,8 @@ input {
   width: 33%;
   background-color: blue;
 }
+
+
+body{
+  background-color: ".color";
+}

@@ -3,35 +3,44 @@
 
 $(document).ready(function() {
 
-  $("form#test").submit(function(event){
-    var rad = $("input:radio[name=when]:checked").val();
+  $("form").submit(function(event){
+    var rad = $(":radio[name=when]:checked").val();
     $(".radioPrint").text(rad);
     event.preventDefault();
   });
 
-  $("form#test").submit(function(event){
-		var num1 = $("input#volume").val();
+  $("form").submit(function(event){
+		var num1 = $("#volume").val();
 		$(".liters").text(Gallon2Liter(num1));
 		event.preventDefault();
 	});
-	$("form#test").submit(function(event){
-		var num2 = $("input#length").val();
+	$("form").submit(function(event){
+		var num2 = $("#length").val();
 		$(".meters").text(Foot2Meter(num2));
 		event.preventDefault();
 	});
 
-  $("form#test").submit(function(event){
-    var dob = $("input#birthdate").val();
+  $("form").submit(function(event){
+    var dob = $("#birthdate").val();
     $(".birthdate").text(dob);
     event.preventDefault();
   });
 
-  $("form#test").submit(function(event){
-    var dob = $("option:selected").val();
+  $("form").submit(function(event){
+    var dob = $(":selected").val();
     $(".sele").text(dob);
     event.preventDefault();
   });
+
+  $("form").submit(function(event){
+    var favoriteColor = $("#color").val();
+    $(".acolor").text(favoriteColor);
+    document.body.style.background = favoriteColor;
+    event.preventDefault();
+  });
+
 });
+
 
 var Gallon2Liter = function(num1) {
 	return (num1 * 3.78541);
