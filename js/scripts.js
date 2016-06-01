@@ -6,33 +6,19 @@ $(document).ready(function() {
   $("form").submit(function(event){
     var rad = $(":radio[name=when]:checked").val();
     $(".radioPrint").text(rad);
-    event.preventDefault();
-  });
+    // event.preventDefault();
+    var num1 = $("#volume").val();
+    $(".liters").text(Gallon2Liter(num1));
 
-  $("form").submit(function(event){
-		var num1 = $("#volume").val();
-		$(".liters").text(Gallon2Liter(num1));
-		event.preventDefault();
-	});
-	$("form").submit(function(event){
-		var num2 = $("#length").val();
-		$(".meters").text(Foot2Meter(num2));
-		event.preventDefault();
-	});
+    var num2 = $("#length").val();
+    $(".meters").text(Foot2Meter(num2));
 
-  $("form").submit(function(event){
     var dob = $("#birthdate").val();
     $(".birthdate").text(dob);
-    event.preventDefault();
-  });
 
-  $("form").submit(function(event){
-    var dob = $(":selected").val();
-    $(".sele").text(dob);
-    event.preventDefault();
-  });
+    var dob2 = $(":selected").val();
+    $(".sele").text(dob2);
 
-  $("form").submit(function(event){
     var favoriteColor = $("#color").val();
     $(".acolor").text(favoriteColor);
     document.body.style.background = favoriteColor;
@@ -49,7 +35,3 @@ var Gallon2Liter = function(num1) {
 var Foot2Meter = function(num2) {
 	return (num2 * 0.3048);
 };
-
-
-// (Gallon2Liter(num1));
-// (Foot2Meter(num2));
