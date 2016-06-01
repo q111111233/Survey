@@ -1,0 +1,94 @@
+<!-- Ask them to fill in their name, their favorite foods, their favorite music, and any other information you feel like. Include all form input types we've covered so far (except checkboxes; we'll learn more about those next week!) -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Nice Survey</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please fill out our survey</h1>
+
+      <div>
+        <form id="test">
+          <label>When do you like to wake up?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="when" value="Morning" checked>
+              Morning
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="when" value="Afternoon">
+              Afternoon
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="when" value="Evening">
+              Evening
+            </label>
+          </div>
+        </form>
+
+        <form id="test">
+          <select class="form-control" id="pizza">
+            <option>pizza</option>
+            <option>pork</option>
+            <option>sugar</option>
+            <option>beer</option>
+            <option>veggies</option>
+          </select>
+        </form>
+
+      <form id="test">
+        <div class="form-group">
+          <label for="birthdate">What's your date of birth?</label>
+          <input id="birthdate" class="form-control" type="date">
+        </div>
+        <!-- <button type="submit" class="btn">Save birthdate</button> -->
+      </form>
+
+        <!-- <form id="convert-vol"> -->
+        <form id="test">
+          <div class="form-group">
+            <label for="volume">Number of Gallons?</label>
+            <input id="volume" class="form-control" type="text">
+          </div>
+          <!-- <button type="submit" class="btn">Print receipt!</button> -->
+        </form>
+
+
+        <!-- <form id="convert-length"> -->
+        <form id="test">
+          <div class="form-group">
+            <label for="length">How many feet?</label>
+            <input id="length" class="form-control" type="text">
+          </div>
+          <button type="submit" class="btn">Print receipt!</button>
+        </form>
+
+
+
+      </div>
+
+      <div>
+        <h1>Your conversions.</h1>
+        <p>
+        Your birthday is: <span class="birthdate"></span><br>
+        You like to eat: <span class="sele"></span><br>
+        You like to wake up: <span class="radioPrint"></span><br>
+        Liters from Gallons= <span class="liters"></span><br>
+        Meters from feet= <span class="meters"></span>
+        </p>
+
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
